@@ -16,12 +16,17 @@ class App extends React.Component{
     }
   }
 
+  changetobeach = (event) => {
+    this.setState({searchtext: 'Beach'})
+  }
+
   render() {
     return (
           <div>
             <Title/>
             <SearchBar/>
             <PresetSearch preselectedwords={preselectedwords}/>
+            <button onClick={this.changetobeach}>Change to beach</button>
             <ImageResults searchtext={this.state.searchtext}/>
           </div>
         )
