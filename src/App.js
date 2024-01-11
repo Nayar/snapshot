@@ -6,7 +6,7 @@ import PresetSearch from './PresetSearch';
 import ImageResults from './ImageResults';
 import React from 'react';
 
-let preselectedwords = ['Mountain','Sea','Sky', 'bird',]
+let preselectedwords = ['Mountain','Sea','Sky', 'bird', 'cars']
 
 class App extends React.Component{
   constructor(props) {
