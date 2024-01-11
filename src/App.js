@@ -5,6 +5,7 @@ import SearchBar from './SearchBar';
 import PresetSearch from './PresetSearch';
 import ImageResults from './ImageResults';
 import React from 'react';
+import './Loader.css';
 
 let preselectedwords = ['Mountain','Sea','Sky', 'bird', 'cars']
 
@@ -12,12 +13,18 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchtext: "Sky"
+      searchtext: "Sky",
+      isLoading: false
     };
   }
 
   handleChangeSearch = (text) => {
-    this.setState({ searchtext: text });
+    this.setState({ searchtext: text, isLoading: true }, () => {
+      
+      setTimeout(() => {
+        this.setState({ isLoading: false });
+      }, 3000);
+    });
   };
 
   changetobeach = (event) => {
@@ -26,6 +33,10 @@ class App extends React.Component {
   };
 
   render() {
+    if (this.state.isLoading) {
+      return <div className="loader"></div>;
+    }
+  
     return (
       <div>
         <Title />
@@ -38,4 +49,3 @@ class App extends React.Component {
 }
 
 export default App;
-
