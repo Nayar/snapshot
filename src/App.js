@@ -3,6 +3,7 @@ import './App.css';
 import Title from './Title';
 import SearchBar from './SearchBar';
 import PresetSearch from './PresetSearch';
+import ImageResults from './ImageResults';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Title/>
       <SearchBar/>
       <PresetSearch/>
+      <ImageResults/>
     </div>
   );
 }
