@@ -8,29 +8,34 @@ import React from 'react';
 
 let preselectedwords = ['Mountain','Sea','Sky', 'bird', 'cars']
 
-class App extends React.Component{
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       searchtext: "Sky"
-    }
+    };
   }
 
+  handleChangeSearch = (text) => {
+    this.setState({ searchtext: text });
+  };
+
   changetobeach = (event) => {
-    let text = event.target.outerText
-    this.setState({searchtext: text})
-  }
+    let text = event.target.outerText;
+    this.setState({ searchtext: text });
+  };
 
   render() {
     return (
-          <div>
-            <Title/>
-            <SearchBar/>
-            <PresetSearch preselectedwords={preselectedwords} onclick={this.changetobeach}/>
-            <ImageResults searchtext={this.state.searchtext}/>
-          </div>
-        )
+      <div>
+        <Title />
+        <SearchBar onSearch={this.handleChangeSearch} />
+        <PresetSearch preselectedwords={preselectedwords} onclick={this.changetobeach} />
+        <ImageResults searchtext={this.state.searchtext} />
+      </div>
+    );
   }
 }
 
 export default App;
+
