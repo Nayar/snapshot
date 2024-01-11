@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import './ImageResults.css'; // Import your CSS file
 
 function ImageResults(props) {
     const [images, setImages] = useState([]);
@@ -24,13 +25,13 @@ function ImageResults(props) {
     return (
         <div>
             <h1>{props.searchtext} Pictures</h1>
-            <ul>
+            <div className="image-grid"> {/* Add the CSS class here */}
                 {images.map((image, index) => (
-                    <li key={index}>
+                    <div key={index} className="image-item"> {/* Wrap each image in a div and apply a CSS class */}
                         <img src={image.src.small} width="200px" height="200px"/>
-                    </li>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }
