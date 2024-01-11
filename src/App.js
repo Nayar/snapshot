@@ -11,7 +11,7 @@ function App() {
       <Title/>
       <SearchBar/>
       <PresetSearch/>
-      <ImageResults/>
+      <ImageResults searchtext="Beach"/>
     </div>
   );
 }
