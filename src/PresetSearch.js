@@ -1,6 +1,6 @@
 function PresetSearch(props) {
     return (<div>
-        {props.preselectedwords.map((word) => <button>{word}</button>)}
+        {props.preselectedwords.map((word) => <button onClick={props.onclick}>{word}</button>)}
     </div>)
 }
 
