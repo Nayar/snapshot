@@ -4,8 +4,7 @@ import Title from './Title';
 import SearchBar from './SearchBar';
 import PresetSearch from './PresetSearch';
 import ImageResults from './ImageResults';
-
-let preselectedwords = ['Mountain','Sea','Sky']
+let preselectedwords = ['Mountain','Sea','Sky', 'bird',]
 
 function App() {
   return (

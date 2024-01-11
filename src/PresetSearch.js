@@ -1,8 +1,6 @@
-function PresetSearch() {
+function PresetSearch(props) {
     return (<div>
-        <button>Mountain</button>
-        <button>Beach</button>
-        <button>Birds</button>
+        {props.preselectedwords.map((word) => <button>{word}</button>)}
     </div>)
 }
 
