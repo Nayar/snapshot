@@ -5,12 +5,14 @@ import SearchBar from './SearchBar';
 import PresetSearch from './PresetSearch';
 import ImageResults from './ImageResults';
 
+let preselectedwords = ['Mountain','Sea','Sky']
+
 function App() {
   return (
     <div>
       <Title/>
       <SearchBar/>
-      <PresetSearch/>
+      <PresetSearch preselectedwords={preselectedwords}/>
       <ImageResults searchtext="Beach"/>
     </div>
   );
