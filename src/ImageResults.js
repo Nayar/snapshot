@@ -63,7 +63,7 @@ function ImageResults(props) {
 
     return (
         <div>
-            <h1>{props.searchtext} Pictures</h1>
+            <h2>photos {props.searchtext}</h2>
             <div className="image-grid">
                 {images.map((image, index) => (
                     <div key={index} className="image-item">
